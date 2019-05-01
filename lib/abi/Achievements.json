@@ -1,0 +1,324 @@
+[
+  {
+    "inputs": [
+      {
+        "name": "messagesContract",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor",
+    "signature": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "messageHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "previousMessageHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "Create",
+    "type": "event",
+    "signature": "0x0d2297cec1ae03481ad18bf4f056374d7da4ae00ce43627b64659002125cccf0"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "link",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "newTitle",
+        "type": "string"
+      }
+    ],
+    "name": "UpdateTitle",
+    "type": "event",
+    "signature": "0x95cc0ae12bd9a5e87d3df5b8c102cef2b31bab9d9fd267387a974eb1a9924b61"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "link",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "witness",
+        "type": "address"
+      }
+    ],
+    "name": "Confirm",
+    "type": "event",
+    "signature": "0x44cd04f736ad09845a66019a358898aacdd64afdc1e497dea7cc83f6d81036df"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "userAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "creatorAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "link",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "Support",
+    "type": "event",
+    "signature": "0xfb718deb4373d991b86a4400b72aa17f65b77a0067773b9af07312e005982717"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "tokenContract",
+        "type": "address"
+      }
+    ],
+    "name": "initToken",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xdf4d17dc"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "name": "link",
+        "type": "string"
+      }
+    ],
+    "name": "getHash",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x6b2c61c1"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "name": "getAchievementsChain",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xaaf93ac1"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "messageHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getAchievementByHash",
+    "outputs": [
+      {
+        "components": [
+          {
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "link",
+            "type": "string"
+          },
+          {
+            "name": "exists",
+            "type": "bool"
+          }
+        ],
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0x6b48eb03"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "name": "link",
+        "type": "string"
+      }
+    ],
+    "name": "getAchievement",
+    "outputs": [
+      {
+        "components": [
+          {
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "link",
+            "type": "string"
+          },
+          {
+            "name": "exists",
+            "type": "bool"
+          }
+        ],
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function",
+    "signature": "0xab722ce8"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "link",
+        "type": "string"
+      },
+      {
+        "name": "newTitle",
+        "type": "string"
+      }
+    ],
+    "name": "updateTitle",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xad308907"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "link",
+        "type": "string"
+      },
+      {
+        "name": "title",
+        "type": "string"
+      }
+    ],
+    "name": "create",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x198e2b8a"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "name": "link",
+        "type": "string"
+      }
+    ],
+    "name": "confirm",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0x2d5bf520"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "userAddress",
+        "type": "address"
+      },
+      {
+        "name": "creatorAddress",
+        "type": "address"
+      },
+      {
+        "name": "link",
+        "type": "string"
+      },
+      {
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "support",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function",
+    "signature": "0xaad2af42"
+  }
+]

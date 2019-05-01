@@ -1,0 +1,18 @@
+{
+  "name": "events-feeds-reducer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "test": "nyc riteway test/unit/*.test.js | tap-nirvana",
+  "dependencies": {
+    "getstream": "4.1.0",
+    "loom-js": "1.38.0",
+    "ramda": "^0.26.1",
+    "web3": "1.0.0-beta.36"
+  },
+  "devDependencies": {
+    "nyc": "^14.0.0",
+    "riteway": "^6.0.3",
+    "tap-nirvana": "^1.1.0"
+  }
+}
